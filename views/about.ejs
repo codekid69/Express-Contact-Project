@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <h1>ABOUT SECTION</h1>
+    <ul>
+        <% for(let i=1;i<15;i++){ %>
+
+            <li>
+                <!-- For printing '=' is required -->
+                <%= i %>
+            </li>
+
+        <% } %>
+    </ul>
+    <% if(true) {%>
+        
+        <h1>TRUE STATEMENT</h1>
+         
+    <% }else { %>
+        
+       <p>FALSE :(</p>
+
+    <% } %>
+</body>
+
+</html>

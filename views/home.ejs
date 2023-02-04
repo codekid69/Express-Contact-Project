@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <h1 id="page-heading">
+        <i class="fas fa-address-book"></i>
+        My Contacts List
+    </h1>
+    <div class="container">
+        <ul>
+            <% for(let i of contact_list){%>
+                <li class="contact">
+                    <div class="details">
+                        <p>
+                            <%= i.name %>
+                        </p>
+                        <p>
+                            <%= i.phone %>      
+                        </p>
+                    </div>
+                  
+                    <div class="delete">
+                        <!-- passing i.phone via route this is on string param -->
+                        <!-- <a href="/delete-contact/<%= i.phone%>"> -->
+                        
+                          <!-- this is querry param this will be visible in url -->
+                         <a href="/delete-contact/?phone=<%= i.phone%>&name=<%=i.name%>">
+                         <i class="fas fa-window-close"></i>
+                        </a>
+                    </div>
+
+                </li>
+
+                <% } %>
+        </ul>
+    </div>
+
+    <!--action is where do you want to send the data  -->
+    <form action="/create-contact" method="POST">
+        <!-- name used for naming the keys of data -->
+        <input type="text" name="name" placeholder="Enter the name" required>
+        <input type="number" name="phone" placeholder="Enter the number" required>
+        <button type="submit">Add</button>
+        <!-- <button id="delete">Delete contact</button> -->
+    </form>
+    <script src="https://kit.fontawesome.com/fc71e2e1ac.js" crossorigin="anonymous"></script>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

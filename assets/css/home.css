@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* text-align: center; */
+    /* background-color: rgb(110, 107, 107); */
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+.container{
+    position: relative;
+    left: 38%;
+    /* border: 2px solid black ; */
+    width: 25%;
+}
+.container ul{
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    display:grid;
+    grid-gap: 5px;
+}
+.container ul li{
+    background-color: rgb(14, 99, 145);
+    /* width: 100%; */
+    /* display: flex; */
+    
+}
+
+.container ul li:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+.container ul li p{
+    color: white;
+    /* border: 2px solid black ; */
+    /* border: 2px solid black ; */
+    display: inline-block;
+    margin: 10px;
+}
+form{
+    position: relative;
+    left: 40.5%;
+}
+input{
+    background-color:rgb(111, 110, 110);
+    outline: none;
+    /* border-radius: 5%; */
+    padding: 0.3rem;
+    margin: 0rem 0.1rem;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+button{
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: rgb(14, 99, 145);
+    color: white;
+    border-radius: 5%;
+}
+ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete{
+    /* border: 2px solid black; */
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete a {
+    color: white;
+    background-color: red;
+}
